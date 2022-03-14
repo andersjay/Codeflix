@@ -1,0 +1,64 @@
+.movieRow{
+  margin-bottom: 30px;
+
+  h2{
+    margin: 0 0 0 30px;
+  }
+
+  .listArea{
+    padding-left:30px;
+    overflow-x: hidden;
+
+    .list{
+      transition: all ease 0.5s;
+
+      
+      .item{
+        display: inline-block;
+        width: 250px;
+        cursor: pointer;
+
+        img{
+          width: 100%;
+          transform: scale(0.9);
+          transition: transform 0.3s;
+
+          &:hover{
+            transform: scale(1);
+          }
+        }
+      }
+
+    }
+  }
+
+  .left,.right{
+    width: 40px;
+    height: 337.7px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 19px;
+    overflow:hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: ease 0.2s;
+  }
+
+  .left{
+    left: 0;
+  }
+
+  .right{
+    right: 0;
+  }
+
+  &:hover .left,
+  &:hover .right{
+    opacity: 1;
+  }
+
+}
