@@ -50,7 +50,7 @@ export function Movies({title, items}){
                 width: items.results.length * 250
               
             }} >
-                  {items.results.length > 0 && items.results.map((item,key) => (
+                  {items.results && items.results.length > 0 && items.results.map((item,key) => (
                     <div className="item">
                         <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
                     </div>
